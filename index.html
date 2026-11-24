@@ -94,7 +94,7 @@
   }
 
   /* ---------- hero ---------- */
-  .hero{position:relative;overflow:hidden;padding:76px 0 88px;background:
+  .hero{position:relative;overflow:hidden;padding:72px 0 76px;background:
     radial-gradient(1100px 480px at 78% -10%, #EDF1FF 0%, rgba(237,241,255,0) 62%),
     radial-gradient(720px 420px at 8% 8%, #F2F7F4 0%, rgba(242,247,244,0) 60%),
     linear-gradient(180deg,#FBFCFD 0%, #FFFFFF 78%);
@@ -239,7 +239,7 @@
   .cup-reset:hover{color:var(--ink);border-color:#CFD7E4}
 
   .cup-stage{padding:26px}
-  .match{display:grid;grid-template-columns:1fr 54px 1fr;align-items:stretch;gap:0}
+  .match{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch;gap:0}
   .vs{display:grid;place-items:center}
   .vs span{
     width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
@@ -312,6 +312,9 @@
   .result-box{background:#FBFCFE;border:1px solid var(--line-2);border-radius:16px;padding:20px}
   .result-box h4{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--muted-2)}
   .result-box .big{font-size:13.5px;line-height:1.8;color:var(--ink-2);margin-top:10px;word-break:keep-all}
+  .result-fact{display:flex;gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+  .result-fact .av{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--emerald-soft);display:grid;place-items:center;font-size:10px;font-weight:800;color:var(--emerald)}
+  .result-fact p{font-size:12.5px;line-height:1.65;color:var(--ink-2);word-break:keep-all}
   .qlist{margin-top:4px;display:grid;gap:9px}
   .qitem{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px 12px}
   .qitem p{flex:1;font-size:13px;line-height:1.6;color:var(--ink-2);word-break:keep-all}
@@ -331,7 +334,7 @@
   .chip{height:36px;padding:0 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--muted);transition:.2s}
   .chip:hover{color:var(--ink);border-color:#CFD7E4}
   .chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start}
   .card{
     background:#fff;border:1px solid var(--line);border-radius:18px;padding:0;overflow:hidden;transition:border-color .2s,box-shadow .25s,transform .2s;
     display:flex;flex-direction:column;
@@ -968,7 +971,7 @@
     btn.setAttribute('data-id', d.id);
     btn.setAttribute('aria-label', d.name + ' 선택 — ' + d.tag);
     btn.innerHTML =
-      '<span class="picked-flag">선택됨</span>' +
+      '<span class="picked-flag" aria-hidden="true">선택됨</span>' +
       '<div class="c-top">' +
         '<div><div class="c-name">' + esc(d.name) + '</div>' +
         '<div class="c-tag">' + esc(d.tag) + '</div></div>' +
@@ -1041,6 +1044,8 @@
           '<h4>이 학과, 실제로는</h4>' +
           '<p class="big">' + esc(d.problem) + '</p>' +
           '<p class="big" style="color:#5D6B80;font-size:12.5px;margin-top:12px">' + esc(d.meta) + '</p>' +
+          '<div class="result-fact"><span class="av">' + esc(d.initial) + '</span><p>재학생 — ' + esc(d.fact) + '</p></div>' +
+          '<p class="big" style="color:#5D6B80;font-size:12.5px;margin-top:14px">' + esc(d.needs) + '</p>' +
         '</div>' +
         '<div class="result-box">' +
           '<h4>재학생에게 바로 물어볼 질문</h4>' +
