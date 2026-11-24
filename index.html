@@ -9,6 +9,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="전공의 모든것 · 시즌2 — 상상과 실제 사이" />
 <meta property="og:description" content="8개 학과의 실제 시험문제로 골라보는 전공 이상형 월드컵. 재학생에게 바로 물어볼 질문까지." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1526'/%3E%3Ccircle cx='23' cy='23' r='5' fill='%23ffffff' opacity='.65'/%3E%3Ccircle cx='41' cy='23' r='5' fill='%23ffffff' opacity='.65'/%3E%3Ccircle cx='23' cy='41' r='5' fill='%23ffffff' opacity='.3'/%3E%3Ccircle cx='41' cy='41' r='5' fill='%236F8BFF'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -523,7 +524,6 @@
             <span>1학년 1학기 · 전공필수</span>
             <span>서술형</span>
           </div>
-          <div class="pc-fallback">이미지 없이 텍스트로 구성된 카드</div>
         </div>
         <div class="stamp"><span><b>실제</b>기출<br>스타일</span></div>
         <div class="float-tag">
@@ -1163,6 +1163,10 @@
   function openCard(id){
     var art = cardsWrap.querySelector('[data-id="' + id + '"]');
     if(!art) return;
+    if(art.classList.contains('hidden')){
+      var allChip = document.querySelector('#filters .chip[data-cat="all"]');
+      if(allChip) allChip.click();
+    }
     if(!art.classList.contains('open')) toggleCard(art);
     setTimeout(function(){
       art.scrollIntoView({behavior:'smooth', block:'center'});
