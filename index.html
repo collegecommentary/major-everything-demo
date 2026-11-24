@@ -391,7 +391,12 @@
 
   /* ---------- connection structure ---------- */
   #flow{background:linear-gradient(180deg,#F7F8FA 0%,#FFFFFF 65%)}
-  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;position:relative}
+  .step:not(:last-child)::after{
+    content:"";position:absolute;top:50%;right:-23px;width:11px;height:11px;
+    border-top:1.6px solid #B9C4D4;border-right:1.6px solid #B9C4D4;
+    transform:translateY(-50%) rotate(45deg);
+  }
   .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 24px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s,border-color .25s}
   .step:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#CBD5E4}
   .step-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -415,6 +420,7 @@
   @media (max-width:900px){
     .flow{grid-template-columns:1fr;gap:14px}
     .step{padding:22px 20px}
+    .step:not(:last-child)::after{display:none}
   }
 
   /* ---------- youtube ---------- */
