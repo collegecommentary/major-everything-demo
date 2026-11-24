@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>전공의 모든것 · 시즌2 — 전공 시험문제 맛보기 &amp; 전공 이상형 월드컵</title>
+<meta name="description" content="고딩 때 상상한 전공과 실제 중간고사는 다릅니다. 8개 학과의 진짜 시험문제로 취향을 테스트하고, 재학생에게 직접 물어보세요. 전공의 모든것 시즌2 프리뷰." />
+<meta name="theme-color" content="#0B1526" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="전공의 모든것 · 시즌2 — 상상과 실제 사이" />
+<meta property="og:description" content="8개 학과의 실제 시험문제로 골라보는 전공 이상형 월드컵. 재학생에게 바로 물어볼 질문까지." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0B1526;
+    --ink-2:#22304A;
+    --muted:#5D6B80;
+    --muted-2:#8A96A8;
+    --line:#E4E8EF;
+    --line-2:#EDF0F5;
+    --bg:#F6F7F9;
+    --paper:#FFFFFF;
+    --cobalt:#2A4EE4;
+    --cobalt-deep:#1D3AC0;
+    --cobalt-soft:#EDF1FF;
+    --emerald:#0E9B72;
+    --emerald-soft:#E8F7F0;
+    --radius:20px;
+    --shadow-sm:0 1px 2px rgba(11,21,38,.05), 0 1px 3px rgba(11,21,38,.04);
+    --shadow-md:0 10px 30px -12px rgba(11,21,38,.18), 0 2px 6px rgba(11,21,38,.05);
+    --shadow-lg:0 30px 60px -30px rgba(11,21,38,.35), 0 6px 18px -10px rgba(11,21,38,.15);
+    --max:1120px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    letter-spacing:-0.011em;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,p,figure,blockquote{margin:0}
+  ul,ol{margin:0;padding:0;list-style:none}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:rgba(42,78,228,.16)}
+
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+  .serif{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:.005em}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:60;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:saturate(180%) blur(14px);
+    -webkit-backdrop-filter:saturate(180%) blur(14px);
+    border-bottom:1px solid rgba(228,232,239,.9);
+  }
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .mark{
+    width:34px;height:34px;border-radius:10px;flex:0 0 auto;
+    background:linear-gradient(150deg,#12203A,#0B1526);
+    display:grid;place-items:center;position:relative;overflow:hidden;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.10);
+  }
+  .mark i{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;opacity:.5}
+  .mark i:nth-child(1){top:8px;left:8px}
+  .mark i:nth-child(2){top:8px;right:8px}
+  .mark i:nth-child(3){bottom:8px;left:8px;opacity:.28}
+  .mark i:nth-child(4){bottom:8px;right:8px;background:#6F8BFF;opacity:1}
+  .brand-name{font-weight:800;font-size:16.5px;letter-spacing:-.03em;white-space:nowrap}
+  .brand-sub{font-size:10.5px;font-weight:700;letter-spacing:.13em;color:var(--cobalt);border:1px solid rgba(42,78,228,.28);border-radius:999px;padding:3px 7px;white-space:nowrap}
+  .nav{display:flex;align-items:center;gap:6px}
+  .nav a{font-size:14px;font-weight:600;color:var(--ink-2);padding:9px 13px;border-radius:10px;transition:background .2s,color .2s}
+  .nav a:hover{background:#F3F5F9;color:var(--ink)}
+  .nav .nav-cta{background:var(--ink);color:#fff;padding:10px 16px;border-radius:11px}
+  .nav .nav-cta:hover{background:#16233B;color:#fff}
+  @media (max-width:780px){
+    .nav a:not(.nav-cta){display:none}
+    .nav .nav-cta{font-size:13px;padding:9px 13px}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:76px 0 88px;background:
+    radial-gradient(1100px 480px at 78% -10%, #EDF1FF 0%, rgba(237,241,255,0) 62%),
+    radial-gradient(720px 420px at 8% 8%, #F2F7F4 0%, rgba(242,247,244,0) 60%),
+    linear-gradient(180deg,#FBFCFD 0%, #FFFFFF 78%);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(11,21,38,.055) 1px, transparent 1px);
+    background-size:26px 26px;
+    mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 62%);
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 62%);
+  }
+  .hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.06fr .94fr;gap:64px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--ink-2);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 11px;box-shadow:var(--shadow-sm)}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 4px rgba(14,155,114,.14)}
+  .eyebrow em{font-style:normal;color:var(--muted);font-weight:600}
+  .hero h1{
+    margin:22px 0 0;font-size:clamp(38px,4.6vw,60px);line-height:1.16;letter-spacing:-.045em;font-weight:800;
+    word-break:keep-all;
+  }
+  .hero h1 .accent{position:relative;white-space:nowrap;color:var(--cobalt)}
+  .hero h1 .accent::after{
+    content:"";position:absolute;left:2px;right:2px;bottom:.06em;height:.36em;z-index:-1;
+    background:linear-gradient(90deg,rgba(42,78,228,.16),rgba(42,78,228,.05));
+    border-radius:4px;
+  }
+  .hero .lede{margin-top:22px;max-width:536px;font-size:17px;line-height:1.75;color:var(--muted);word-break:keep-all}
+  .hero .lede strong{color:var(--ink);font-weight:700}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:32px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:52px;padding:0 24px;border-radius:14px;font-weight:700;font-size:15.5px;letter-spacing:-.02em;
+    transition:transform .18s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:linear-gradient(180deg,#3355EA,#2445D6);color:#fff;box-shadow:0 10px 24px -12px rgba(42,78,228,.75),inset 0 1px 0 rgba(255,255,255,.22)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(42,78,228,.8),inset 0 1px 0 rgba(255,255,255,.22)}
+  .btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink);box-shadow:var(--shadow-sm)}
+  .btn-ghost:hover{border-color:#CFD7E4;transform:translateY(-2px)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:13px; color:var(--muted-2)}
+  .hero-meta span{display:inline-flex;align-items:center;gap:7px}
+  .hero-meta b{color:var(--ink-2);font-weight:700}
+
+  /* hero visual */
+  .hero-visual{position:relative;min-height:432px}
+  .paper-card{
+    position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow-lg);padding:22px 24px 24px;overflow:hidden;
+  }
+  .paper-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--cobalt),#6F8BFF 55%,var(--emerald))}
+  .pc-fallback{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted-2);font-size:13px}
+  .hero-visual .back{
+    position:absolute;inset:26px -6px auto 34px;height:380px;border-radius:18px;
+    background:linear-gradient(160deg,#F0F3F9,#FAFBFD);border:1px solid #E9EDF4;transform:rotate(-4deg);
+  }
+  .hero-visual .front{position:absolute;inset:40px 0 auto 0;transform:rotate(1.4deg)}
+  .pc-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--line-2)}
+  .pc-title{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--muted-2)}
+  .pc-chip{font-size:10.5px;font-weight:800;letter-spacing:.06em;color:var(--cobalt);background:var(--cobalt-soft);border-radius:6px;padding:4px 8px}
+  .pc-q{margin-top:16px;font-size:12.5px;line-height:1.85;color:var(--ink-2);word-break:keep-all}
+  .pc-q b{font-weight:700;color:var(--ink)}
+  .pc-line{height:9px;border-radius:5px;background:#EFF2F7;margin-top:9px}
+  .pc-line.s{width:62%}
+  .pc-foot{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+  .pc-foot span{font-size:11.5px;color:var(--muted-2);font-weight:600}
+  .stamp{
+    position:absolute;right:-14px;bottom:-22px;width:104px;height:104px;border-radius:50%;
+    display:grid;place-items:center;text-align:center;
+    background:conic-gradient(from 200deg,#0E9B72,#0B8A66,#0E9B72);
+    color:#fff;font-size:11px;font-weight:800;line-height:1.35;letter-spacing:.02em;
+    box-shadow:0 16px 30px -14px rgba(14,155,114,.7), inset 0 0 0 3px rgba(255,255,255,.22);
+    transform:rotate(-9deg);
+  }
+  .stamp b{display:block;font-size:19px;letter-spacing:-.02em;margin-bottom:2px}
+  .float-tag{
+    position:absolute;left:-16px;bottom:26px;background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:10px 14px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;color:var(--ink-2)
+  }
+  .float-tag .av{width:24px;height:24px;border-radius:50%;background:linear-gradient(140deg,#DCE4FF,#C9D6FF);display:grid;place-items:center;font-size:10.5px;font-weight:800;color:var(--cobalt-deep)}
+  .float-tag small{display:block;font-size:10.5px;font-weight:600;color:var(--muted-2);margin-top:1px}
+
+  @media (max-width:980px){
+    .hero{padding:56px 0 64px}
+    .hero-in{grid-template-columns:1fr;gap:52px}
+    .hero-visual{min-height:0;max-width:520px;margin:0 auto;width:100%}
+    .hero-visual .back{display:none}
+    .hero-visual .front{position:relative;inset:auto;transform:none}
+    .stamp{right:-6px;bottom:-18px;width:88px;height:88px;font-size:10px}
+    .stamp b{font-size:16px}
+    .float-tag{left:-6px;bottom:-26px;font-size:11.5px}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 18px}
+    .hero h1{font-size:33px}
+    .hero .lede{font-size:15.5px}
+    .btn{height:50px;font-size:15px;flex:1 1 auto;padding:0 18px}
+    .btn-ghost{flex:0 1 auto}
+  }
+
+  /* ---------- section scaffolding ---------- */
+  section{position:relative}
+  .sec{padding:96px 0}
+  .sec-tight{padding:72px 0}
+  .sec-head{max-width:720px;margin-bottom:44px}
+  .sec-kicker{display:flex;align-items:center;gap:11px;font-size:11.5px;font-weight:800;letter-spacing:.16em;color:var(--cobalt);text-transform:uppercase}
+  .sec-kicker::before{content:"";width:26px;height:1.5px;background:var(--cobalt);opacity:.5}
+  .sec-title{margin-top:14px;font-size:clamp(27px,2.9vw,38px);line-height:1.28;letter-spacing:-.04em;font-weight:800;word-break:keep-all}
+  .sec-desc{margin-top:14px;font-size:15.5px;line-height:1.8;color:var(--muted);word-break:keep-all}
+  .divider{height:1px;background:var(--line);border:0;margin:0}
+
+  /* ---------- tabs / demo ---------- */
+  #demo{background:linear-gradient(180deg,#FFFFFF 0%,#F7F8FA 42%,#F7F8FA 100%)}
+  .tabs{display:inline-flex;gap:4px;padding:5px;background:#fff;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow-sm);margin-bottom:34px;max-width:100%}
+  .tab{
+    display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:11px;
+    font-size:14.5px;font-weight:700;color:var(--muted);transition:.2s;white-space:nowrap;
+  }
+  .tab .num{font-size:11px;font-weight:800;color:var(--muted-2);letter-spacing:.04em}
+  .tab:hover{color:var(--ink)}
+  .tab[aria-selected="true"]{background:var(--ink);color:#fff;box-shadow:0 8px 18px -12px rgba(11,21,38,.8)}
+  .tab[aria-selected="true"] .num{color:rgba(255,255,255,.6)}
+  @media (max-width:560px){
+    .tabs{width:100%;display:flex}
+    .tab{flex:1;padding:0 10px;font-size:13px;height:42px;justify-content:center}
+    .tab .num{display:none}
+  }
+
+  .panel[hidden]{display:none}
+  .panel{animation:panelIn .38s ease both}
+  @keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* ---------- world cup ---------- */
+  .cup{background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow-md);overflow:hidden}
+  .cup-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line-2);background:linear-gradient(180deg,#FCFDFF,#F9FAFC);flex-wrap:wrap}
+  .cup-round{display:flex;align-items:center;gap:12px;min-width:0}
+  .round-badge{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--ink);border-radius:7px;padding:5px 9px}
+  .cup-progress{display:flex;align-items:center;gap:6px}
+  .cup-progress i{display:block;width:22px;height:4px;border-radius:3px;background:#E3E7EF;transition:background .3s}
+  .cup-progress i.on{background:var(--cobalt)}
+  .cup-progress i.done{background:var(--ink)}
+  .cup-count{font-size:12.5px;font-weight:700;color:var(--muted-2);letter-spacing:.02em}
+  .cup-reset{font-size:12.5px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:7px 12px;transition:.2s;background:#fff}
+  .cup-reset:hover{color:var(--ink);border-color:#CFD7E4}
+
+  .cup-stage{padding:26px}
+  .match{display:grid;grid-template-columns:1fr 54px 1fr;align-items:stretch;gap:0}
+  .vs{display:grid;place-items:center}
+  .vs span{
+    width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+    background:#fff;border:1px solid var(--line);font-size:12.5px;font-weight:800;color:var(--muted-2);letter-spacing:.03em;
+    box-shadow:var(--shadow-sm)
+  }
+  .contender{
+    position:relative;display:flex;flex-direction:column;text-align:left;width:100%;
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px;
+    transition:transform .2s ease,border-color .2s ease,box-shadow .25s ease;
+    min-height:340px;
+  }
+  .contender:hover{transform:translateY(-3px);border-color:#C9D3E6;box-shadow:var(--shadow-md)}
+  .contender:focus-visible{outline:3px solid rgba(42,78,228,.35);outline-offset:2px}
+  .contender.chosen{border-color:var(--cobalt);box-shadow:0 0 0 3px rgba(42,78,228,.14),var(--shadow-md)}
+  .contender.picked{border-color:var(--emerald);box-shadow:0 0 0 3px rgba(14,155,114,.16)}
+  .contender .picked-flag{
+    position:absolute;top:-11px;right:14px;background:var(--emerald);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.04em;
+    padding:4px 9px;border-radius:999px;opacity:0;transform:translateY(4px);transition:.25s;
+  }
+  .contender.picked .picked-flag{opacity:1;transform:none}
+  .c-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .c-name{font-size:21px;font-weight:800;letter-spacing:-.035em;line-height:1.3}
+  .c-tag{margin-top:5px;font-size:12.5px;font-weight:600;color:var(--muted-2)}
+  .c-cat{font-size:10.5px;font-weight:800;letter-spacing:.02em;color:var(--ink-2);background:#F1F4F8;border-radius:6px;padding:4px 8px;white-space:nowrap}
+  .c-imagine{margin-top:16px;font-size:12.5px;line-height:1.6;color:var(--muted-2);border-left:2px solid #E4E8EF;padding-left:10px;word-break:keep-all}
+  .c-label{display:flex;align-items:center;gap:6px;margin-top:16px;font-size:10.5px;font-weight:800;letter-spacing:.1em;color:var(--cobalt)}
+  .c-label::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--cobalt)}
+  .c-problem{
+    margin-top:8px;background:#F8FAFC;border:1px solid #EDF1F7;border-radius:12px;padding:13px 14px;
+    font-size:12.6px;line-height:1.72;color:var(--ink-2);word-break:keep-all;
+  }
+  .c-problem .pm{display:block;margin-top:8px;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--muted-2)}
+  .c-foot{margin-top:auto;padding-top:16px}
+  .c-quote{display:flex;gap:9px;font-size:12px;line-height:1.6;color:var(--muted);word-break:keep-all}
+  .c-quote .av{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#EEF1F6;display:grid;place-items:center;font-size:10px;font-weight:800;color:var(--ink-2)}
+  .c-pick{
+    display:flex;align-items:center;justify-content:center;gap:7px;margin-top:14px;height:44px;border-radius:11px;
+    background:var(--ink);color:#fff;font-size:13.5px;font-weight:700;transition:.2s;width:100%;
+  }
+  .contender:hover .c-pick{background:var(--cobalt)}
+  .contender.picked .c-pick{background:var(--emerald)}
+
+  @media (max-width:860px){
+    .cup-stage{padding:18px}
+    .match{grid-template-columns:1fr;gap:0}
+    .vs{padding:12px 0}
+    .vs span{width:38px;height:38px;font-size:11.5px}
+    .contender{min-height:0;padding:20px 18px 18px}
+    .c-name{font-size:19px}
+  }
+
+  .cup-hint{margin-top:18px;text-align:center;font-size:12.5px;color:var(--muted-2)}
+  .cup-hint b{color:var(--muted);font-weight:700}
+
+  /* result */
+  .result{padding:30px}
+  .result-head{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap}
+  .result-badge{
+    flex:0 0 auto;display:grid;place-items:center;gap:1px;width:86px;height:86px;border-radius:22px;
+    background:linear-gradient(150deg,#F4F8FF,#E9F1FF);border:1px solid #DDE7FA;text-align:center;
+  }
+  .result-badge small{font-size:9.5px;font-weight:800;letter-spacing:.1em;color:var(--cobalt)}
+  .result-badge b{font-size:26px;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1}
+  .result-title{flex:1 1 260px;min-width:0}
+  .result-title .rk{font-size:11.5px;font-weight:800;letter-spacing:.14em;color:var(--emerald)}
+  .result-title h3{margin-top:6px;font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.04em;line-height:1.25}
+  .result-title p{margin-top:8px;font-size:14px;color:var(--muted);word-break:keep-all}
+  .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+  .result-box{background:#FBFCFE;border:1px solid var(--line-2);border-radius:16px;padding:20px}
+  .result-box h4{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--muted-2)}
+  .result-box .big{font-size:13.5px;line-height:1.8;color:var(--ink-2);margin-top:10px;word-break:keep-all}
+  .qlist{margin-top:4px;display:grid;gap:9px}
+  .qitem{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px 12px}
+  .qitem p{flex:1;font-size:13px;line-height:1.6;color:var(--ink-2);word-break:keep-all}
+  .qitem .qn{flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:var(--cobalt-soft);color:var(--cobalt-deep);font-size:10.5px;font-weight:800;display:grid;place-items:center;margin-top:1px}
+  .qcopy{flex:0 0 auto;font-size:11px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:4px 8px;background:#fff;transition:.2s}
+  .qcopy:hover{color:var(--cobalt);border-color:rgba(42,78,228,.4)}
+  .qcopy.ok{color:var(--emerald);border-color:rgba(14,155,114,.4);background:var(--emerald-soft)}
+  .result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .result-actions .btn{height:46px;font-size:14px}
+  @media (max-width:760px){
+    .result{padding:22px}
+    .result-grid{grid-template-columns:1fr}
+  }
+
+  /* ---------- exam cards ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .chip{height:36px;padding:0 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--muted);transition:.2s}
+  .chip:hover{color:var(--ink);border-color:#CFD7E4}
+  .chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:0;overflow:hidden;transition:border-color .2s,box-shadow .25s,transform .2s;
+    display:flex;flex-direction:column;
+  }
+  .card:hover{border-color:#CBD5E4;box-shadow:var(--shadow-md)}
+  .card.open{border-color:rgba(42,78,228,.45);box-shadow:0 0 0 3px rgba(42,78,228,.08),var(--shadow-md)}
+  .card.hidden{display:none}
+  .card-head{display:flex;align-items:flex-start;gap:13px;padding:20px 20px 16px;text-align:left;width:100%}
+  .card-ix{
+    flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:#F3F5F9;display:grid;place-items:center;
+    font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.02em;transition:.2s;
+  }
+  .card.open .card-ix{background:var(--cobalt);color:#fff}
+  .card-h{flex:1;min-width:0}
+  .card-h .nm{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:17px;font-weight:800;letter-spacing:-.03em}
+  .card-h .ct{font-size:10.5px;font-weight:800;color:var(--muted-2);background:#F3F5F9;border-radius:5px;padding:2px 7px;letter-spacing:.02em}
+  .card-h .tg{margin-top:4px;font-size:12.5px;color:var(--muted-2);font-weight:600;word-break:keep-all}
+  .card-toggle{flex:0 0 auto;font-size:11px;font-weight:800;color:var(--muted-2);border:1px solid var(--line);border-radius:8px;padding:5px 9px;transition:.2s}
+  .card.open .card-toggle{color:var(--cobalt);border-color:rgba(42,78,228,.35);background:var(--cobalt-soft)}
+  .card-imagine{padding:0 20px 16px;font-size:12.5px;line-height:1.65;color:var(--muted-2);word-break:keep-all}
+  .card-imagine b{font-weight:800;color:#A9B3C2;font-size:10.5px;letter-spacing:.08em;display:block;margin-bottom:4px}
+  .card-body{display:none;padding:0 20px 20px}
+  .card.open .card-body{display:block;animation:panelIn .3s ease both}
+  .card-problem{background:#0B1526;color:#E7ECF5;border-radius:13px;padding:16px 16px 14px;font-size:13px;line-height:1.8;word-break:keep-all;letter-spacing:-.005em}
+  .card-problem .pm{display:block;margin-top:10px;font-size:10.5px;font-weight:700;letter-spacing:.09em;color:#8EA0BE}
+  .card-problem b{color:#fff;font-weight:700}
+  .card-fact{margin-top:12px;display:flex;gap:9px;background:var(--emerald-soft);border:1px solid rgba(14,155,114,.16);border-radius:11px;padding:12px 13px}
+  .card-fact .av{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:10px;font-weight:800;color:var(--emerald)}
+  .card-fact p{font-size:12.5px;line-height:1.65;color:#0C6B51;word-break:keep-all}
+  @media (max-width:760px){
+    .cards{grid-template-columns:1fr;gap:12px}
+    .card-head{padding:17px 16px 14px}
+    .card-imagine{padding:0 16px 14px}
+    .card-body{padding:0 16px 16px}
+  }
+
+  /* ---------- then vs now ---------- */
+  .compare{background:var(--ink);color:#fff;border-radius:26px;padding:44px;position:relative;overflow:hidden}
+  .compare::before{content:"";position:absolute;inset:auto -120px -180px auto;width:420px;height:420px;background:radial-gradient(circle,rgba(42,78,228,.55),transparent 65%);filter:blur(10px)}
+  .compare::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,transparent,#000)}
+  .compare-in{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+  .compare .kick{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:#8FA6FF}
+  .compare h3{margin-top:14px;font-size:clamp(23px,2.5vw,31px);line-height:1.35;letter-spacing:-.04em;font-weight:800;word-break:keep-all}
+  .compare p{margin-top:14px;font-size:14.5px;line-height:1.85;color:#AFBACD;word-break:keep-all}
+  .cmp-list{display:grid;gap:10px}
+  .cmp-row{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:14px 16px}
+  .cmp-row .yr{font-size:11px;font-weight:800;letter-spacing:.06em;color:#8FA6FF;padding-top:2px}
+  .cmp-row p{font-size:13px;line-height:1.65;color:#D6DCE8}
+  @media (max-width:900px){
+    .compare{padding:30px 24px;border-radius:20px}
+    .compare-in{grid-template-columns:1fr;gap:26px}
+  }
+
+  /* ---------- connection structure ---------- */
+  #flow{background:linear-gradient(180deg,#F7F8FA 0%,#FFFFFF 65%)}
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+  .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 24px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s,border-color .25s}
+  .step:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#CBD5E4}
+  .step-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .step-no{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--muted-2)}
+  .step-no b{display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;font-size:11.5px;letter-spacing:0}
+  .step-ic{width:34px;height:34px;border-radius:10px;background:#F3F6FB;display:grid;place-items:center;color:var(--ink-2)}
+  .step-ic svg{width:18px;height:18px}
+  .step h4{margin-top:18px;font-size:18.5px;font-weight:800;letter-spacing:-.03em;line-height:1.35;word-break:keep-all}
+  .step h4 span{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--muted-2);margin-top:5px}
+  .step p{margin-top:12px;font-size:13.5px;line-height:1.75;color:var(--muted);word-break:keep-all}
+  .step ul{margin-top:14px;display:grid;gap:7px}
+  .step li{position:relative;padding-left:14px;font-size:12.5px;line-height:1.6;color:var(--ink-2);word-break:keep-all}
+  .step li::before{content:"";position:absolute;left:2px;top:.62em;width:4px;height:4px;border-radius:50%;background:#C3CCDA}
+  .ai-chip{margin-top:auto;padding-top:16px}
+  .ai-chip span{display:inline-flex;align-items:center;gap:6px;background:var(--cobalt-soft);color:var(--cobalt-deep);border-radius:8px;padding:6px 10px;font-size:11.5px;font-weight:800;letter-spacing:-.01em}
+  .ai-chip span.solid{background:var(--emerald-soft);color:#0A7557}
+  .ai-chip span.plain{background:#F3F5F9;color:var(--ink-2)}
+  .flow-loop{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px dashed #CDD6E4;border-radius:14px;padding:14px 20px;font-size:13px;color:var(--muted);text-align:center;word-break:keep-all}
+  .flow-loop svg{flex:0 0 auto;color:var(--cobalt)}
+  .flow-loop b{color:var(--ink);font-weight:800}
+  @media (max-width:900px){
+    .flow{grid-template-columns:1fr;gap:14px}
+    .step{padding:22px 20px}
+  }
+
+  /* ---------- youtube ---------- */
+  .yt{background:linear-gradient(160deg,#0D1830 0%,#0B1526 60%,#101E3A 100%);color:#fff;border-radius:28px;padding:52px;position:relative;overflow:hidden}
+  .yt::before{content:"";position:absolute;right:-80px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(42,78,228,.5),transparent 62%)}
+  .yt::after{content:"";position:absolute;left:-60px;bottom:-160px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(14,155,114,.38),transparent 62%)}
+  .yt-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .yt .kick{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:800;letter-spacing:.14em;color:#9FB2FF}
+  .yt .kick .live{width:7px;height:7px;border-radius:50%;background:#FF5C5C;box-shadow:0 0 0 4px rgba(255,92,92,.2)}
+  .yt h3{margin-top:16px;font-size:clamp(25px,3vw,36px);line-height:1.3;letter-spacing:-.045em;font-weight:800;word-break:keep-all}
+  .yt p{margin-top:14px;font-size:14.5px;line-height:1.85;color:#AEBACF;word-break:keep-all;max-width:520px}
+  .yt .btn-yt{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:14px;background:#FF2C2C;color:#fff;font-weight:800;font-size:15px;margin-top:26px;box-shadow:0 16px 30px -16px rgba(255,44,44,.9);transition:.2s}
+  .yt .btn-yt:hover{transform:translateY(-2px);background:#F81E1E}
+  .yt .btn-yt svg{width:20px;height:20px}
+  .yt-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px;backdrop-filter:blur(6px)}
+  .yt-card .lab{font-size:10.5px;font-weight:800;letter-spacing:.14em;color:#8FA6FF}
+  .yt-card .chn{margin-top:10px;font-size:16.5px;font-weight:800;letter-spacing:-.03em}
+  .yt-card .handle{margin-top:4px;font-size:12px;color:#93A2BB;word-break:break-all}
+  .yt-card .rows{margin-top:16px;display:grid;gap:9px}
+  .yt-card .rows div{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12.5px;color:#C6D0E0;border-top:1px solid rgba(255,255,255,.08);padding-top:9px}
+  .yt-card .rows b{color:#fff;font-weight:700}
+  .yt-card .note{margin-top:16px;font-size:11.5px;line-height:1.65;color:#8C9AB2}
+  @media (max-width:900px){
+    .yt{padding:32px 24px;border-radius:22px}
+    .yt-in{grid-template-columns:1fr;gap:28px}
+    .yt .btn-yt{width:100%;justify-content:center}
+  }
+
+  /* ---------- footer ---------- */
+  footer{padding:44px 0 56px;border-top:1px solid var(--line);margin-top:0;background:#fff}
+  .foot-in{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--ink-2)}
+  .foot-brand .mark{width:28px;height:28px;border-radius:8px}
+  .foot-brand .mark i{width:5px;height:5px}
+  .foot-brand .mark i:nth-child(1),.foot-brand .mark i:nth-child(2){top:6px}
+  .foot-brand .mark i:nth-child(3),.foot-brand .mark i:nth-child(4){bottom:6px}
+  .foot-brand .mark i:nth-child(1),.foot-brand .mark i:nth-child(3){left:6px}
+  .foot-brand .mark i:nth-child(2),.foot-brand .mark i:nth-child(4){right:6px}
+  .foot-meta{font-size:12px;color:var(--muted-2);line-height:1.7}
+  .foot-meta a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+    .reveal{opacity:1;transform:none}
+  }
+
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top" aria-label="전공의 모든것 시즌2 홈">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="brand-name">전공의 모든것</span>
+      <span class="brand-sub">SEASON 2</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#demo">체험 데모</a>
+      <a href="#flow">연결 구조</a>
+      <a href="#youtube">유튜브</a>
+      <a class="nav-cta" href="#cup">월드컵 시작</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span>10년 만의 재시동 <em>· 시즌2 프리뷰</em></span>
+        <h1>전공, 그 상상은<br><span class="accent">얼마나 맞았을까</span></h1>
+        <p class="lede">
+          고딩 때 상상한 전공과 실제 중간고사는 다릅니다.
+          8개 학과의 <strong>진짜 시험문제</strong>로 취향을 테스트하고,
+          그 학과 재학생에게 <strong>바로 물어볼 질문</strong>까지 받아 가세요.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cup">지금 체험하기 <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#flow">연결 구조 보기</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>8개</b> 학과 데이터</span>
+          <span><b>8문제</b> 실제 시험 스타일</span>
+          <span><b>무료</b> · 로그인 없음</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="back"></div>
+        <div class="paper-card front">
+          <div class="pc-head">
+            <span class="pc-title">경영통계 · 중간고사</span>
+            <span class="pc-chip">3번 / 25점</span>
+          </div>
+          <p class="pc-q">
+            어느 기업의 수요함수가 <b>Q = 120 − 2P</b>, 총비용 <b>TC = 10Q + 400</b>이다.<br>
+            (1) 이윤극대화 가격과 수량을 구하라.<br>
+            (2) 가격차별의 조건과 사회후생 변화를 <b>영어로 3문장 이내</b>로 서술하라.
+          </p>
+          <div class="pc-line"></div>
+          <div class="pc-line s"></div>
+          <div class="pc-foot">
+            <span>1학년 1학기 · 전공필수</span>
+            <span>서술형</span>
+          </div>
+          <div class="pc-fallback">이미지 없이 텍스트로 구성된 카드</div>
+        </div>
+        <div class="stamp"><span><b>실제</b>기출<br>스타일</span></div>
+        <div class="float-tag">
+          <span class="av">재</span>
+          <span>재학생 한 줄<small>“계산은 엑셀이, 시험은 설명이 어렵습니다”</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEMO ================= -->
+  <section class="sec" id="demo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-kicker">Interactive Demo</span>
+        <h2 class="sec-title">상상과 실제를, 직접 눌러서 비교해 보세요</h2>
+        <p class="sec-desc">
+          입학 전의 막연한 이미지와 입학 후 마주치는 시험지는 꽤 다릅니다.
+          두 가지 방식으로 8개 학과를 만져볼 수 있습니다.
+        </p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="체험 방식 선택">
+        <button class="tab" role="tab" id="tab-cup" aria-selected="true" aria-controls="panel-cup" data-tab="cup">
+          <span class="num">01</span> 전공 이상형 월드컵
+        </button>
+        <button class="tab" role="tab" id="tab-exam" aria-selected="false" aria-controls="panel-exam" data-tab="exam" tabindex="-1">
+          <span class="num">02</span> 학과별 시험문제 맛보기
+        </button>
+      </div>
+
+      <!-- ---------- panel: world cup ---------- -->
+      <div class="panel" id="panel-cup" role="tabpanel" aria-labelledby="tab-cup" tabindex="0">
+        <div class="cup" id="cup">
+          <div class="cup-bar">
+            <div class="cup-round">
+              <span class="round-badge" id="roundLabel">8강</span>
+              <div class="cup-progress" id="progressDots" aria-hidden="true"></div>
+              <span class="cup-count" id="matchCount">1 / 4 경기</span>
+            </div>
+            <button class="cup-reset" id="resetCup" type="button">↻ 처음부터</button>
+          </div>
+
+          <div class="cup-stage" id="cupStage" aria-live="polite">
+            <div class="match" id="matchArea">
+              <!-- filled by JS -->
+            </div>
+            <p class="cup-hint" id="cupHint">두 학과의 <b>실제 시험문제</b>를 읽고, 더 끌리는 쪽을 눌러주세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- panel: exam cards ---------- -->
+      <div class="panel" id="panel-exam" role="tabpanel" aria-labelledby="tab-exam" tabindex="0" hidden>
+        <div class="filters" id="filters" role="group" aria-label="계열 필터">
+          <button class="chip" data-cat="all" aria-pressed="true">전체 8</button>
+          <button class="chip" data-cat="사회" aria-pressed="false">인문·사회</button>
+          <button class="chip" data-cat="공학" aria-pressed="false">공학</button>
+          <button class="chip" data-cat="보건" aria-pressed="false">보건·의료</button>
+          <button class="chip" data-cat="예체능" aria-pressed="false">예체능</button>
+        </div>
+        <div class="cards" id="cards"><!-- filled by JS --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THEN VS NOW ================= -->
+  <section class="sec-tight">
+    <div class="wrap">
+      <div class="compare reveal">
+        <div class="compare-in">
+          <div>
+            <span class="kick">2016 → 2026</span>
+            <h3>10년 전엔 이 연결을<br>사람 손으로 했습니다</h3>
+            <p>
+              질문 100개를 읽고, 8명의 재학생에게 하나씩 연락하고, 답이 오면 다시 정리하는 일이
+              전부 사람 몫이었어요. 지금은 그 앞단을 AI가 맡습니다. 사람은 <b style="color:#fff">답하는 일</b>에만 집중하면 됩니다.
+            </p>
+          </div>
+          <div class="cmp-list">
+            <div class="cmp-row">
+              <span class="yr">10년 전</span>
+              <p>질문을 하나하나 읽고 중복을 걸러내는 데 하루. 재학생에게 카톡을 보내고 회신을 기다리는 데 일주일.</p>
+            </div>
+            <div class="cmp-row">
+              <span class="yr">10년 전</span>
+              <p>좋은 답변이 채팅방에 묻히고, 같은 질문이 다음 주에 다시 올라옴.</p>
+            </div>
+            <div class="cmp-row" style="background:rgba(143,166,255,.12);border-color:rgba(143,166,255,.3)">
+              <span class="yr" style="color:#B7C6FF">시즌 2</span>
+              <p>질문 정리·중복 필터링·답변 요약은 AI가, <b style="color:#fff">경험을 말하는 일은 재학생이</b>. 쌓인 Q&amp;A는 유튜브 콘텐츠로 다시 돌아옵니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FLOW ================= -->
+  <section class="sec" id="flow">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-kicker">How it works</span>
+        <h2 class="sec-title">고등학생 · 재학생 · 아카이브가<br>돌아가는 3단계 구조</h2>
+        <p class="sec-desc">
+          한 번의 질문이 답변으로, 답변이 콘텐츠로, 콘텐츠가 다시 다음 질문으로 이어집니다.
+          AI는 각 단계에서 사람이 하기엔 지루한 일만 대신합니다.
+        </p>
+      </div>
+
+      <div class="flow reveal">
+        <article class="step">
+          <div class="step-top">
+            <span class="step-no"><b>01</b> 고등학생</span>
+            <span class="step-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+            </span>
+          </div>
+          <h4>궁금한 것을 질문으로<span>체험 → 질문 작성</span></h4>
+          <p>월드컵과 시험문제로 취향을 확인한 뒤, “이 학과 진짜 어때요?”를 구체적인 질문으로 남깁니다.</p>
+          <ul>
+            <li>질문이 막막하면 예시 질문 5개를 먼저 제안</li>
+            <li>학과·상황·궁금증 태그로 자동 정리</li>
+          </ul>
+          <div class="ai-chip"><span>✦ AI · 중복 질문 필터링 &amp; 핵심 질문 정리</span></div>
+        </article>
+
+        <article class="step">
+          <div class="step-top">
+            <span class="step-no"><b>02</b> 대학 재학생 멘토</span>
+            <span class="step-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+            </span>
+          </div>
+          <h4>경험으로 답합니다<span>강의 체감 · 시험 · 과제</span></h4>
+          <p>그 학과에 실제로 다니는 재학생이 강의 분위기, 시험 범위, 과제 팁을 자기 언어로 답합니다.</p>
+          <ul>
+            <li>재학생 인증 배지 (학생증·수강 이력 확인)</li>
+            <li>답변 채택 시 활동 리워드 적립</li>
+          </ul>
+          <div class="ai-chip"><span class="solid">사람이 답하는 영역 · 경험은 대체되지 않습니다</span></div>
+        </article>
+
+        <article class="step">
+          <div class="step-top">
+            <span class="step-no"><b>03</b> 아카이브 &amp; 유튜브</span>
+            <span class="step-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg>
+            </span>
+          </div>
+          <h4>검증된 Q&amp;A가 콘텐츠로<span>숏폼 · 영상 재가공</span></h4>
+          <p>채택된 답변은 ‘전공의 모든것’ 유튜브 숏폼으로 재가공되어, 검색으로는 닿지 않던 고등학생에게 도달합니다.</p>
+          <ul>
+            <li>같은 질문이 다시 오면 아카이브에서 즉시 연결</li>
+            <li>영상 → 다시 질문 → 다시 답변의 선순환</li>
+          </ul>
+          <div class="ai-chip"><span>✦ AI · 답변 요약 → 숏폼 대본 · 자막</span></div>
+        </article>
+      </div>
+
+      <div class="flow-loop reveal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+        <span><b>선순환</b> · 영상을 본 고등학생이 다시 질문을 남기고, 그 질문이 다음 콘텐츠가 됩니다.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOUTUBE ================= -->
+  <section class="sec" id="youtube">
+    <div class="wrap">
+      <div class="yt reveal">
+        <div class="yt-in">
+          <div>
+            <span class="kick"><span class="live"></span>CHANNEL ARCHIVE</span>
+            <h3>10년 만에, AI 팀과 함께<br>시즌2를 준비하고 있습니다</h3>
+            <p>
+              ‘전공의 모든것’은 재학생과 고등학생을 직접 연결하려던 10년 전 프로젝트의 홍보 아카이브입니다.
+              그때의 채널을 그대로 두고, 이번엔 연결 구조부터 다시 만듭니다.
+            </p>
+            <a class="btn btn-yt" href="https://www.youtube.com/@%EC%A0%84%EA%B3%B5%EC%9D%98%EB%AA%A8%EB%93%A0%EA%B2%83-n3r" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.3-.4-4.9a2.6 2.6 0 0 0-1.8-1.8C19.2 4.9 12 4.9 12 4.9s-7.2 0-8.8.4A2.6 2.6 0 0 0 1.4 7.1C1 8.7 1 12 1 12s0 3.3.4 4.9a2.6 2.6 0 0 0 1.8 1.8c1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4a2.6 2.6 0 0 0 1.8-1.8C23 15.3 23 12 23 12zM9.8 15.4V8.6l6 3.4z"/></svg>
+              유튜브 채널 바로가기
+            </a>
+          </div>
+          <div class="yt-card">
+            <span class="lab">CHANNEL</span>
+            <div class="chn">전공의 모든것</div>
+            <div class="handle">youtube.com/@전공의모든것-n3r</div>
+            <div class="rows">
+              <div><span>시즌</span><b>Season 2 · 준비 중</b></div>
+              <div><span>콘텐츠</span><b>전공 Q&amp;A 숏폼</b></div>
+              <div><span>운영</span><b>AI 협업 구조 실험</b></div>
+            </div>
+            <p class="note">이 페이지는 시즌2의 첫 1페이지 데모입니다. 실제 서비스는 재학생 인증과 답변 아카이브를 갖춘 형태로 이어집니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>전공의 모든것 · 시즌2 프리뷰</span>
+    </div>
+    <p class="foot-meta">
+      상상은 여기까지, 실제는 재학생에게 · <a href="#demo">체험 데모 다시 보기</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ------------------------------------------------------------------
+     Data: 8 departments. imagine = 고딩 때 상상, problem = 실제 시험 스타일
+  ------------------------------------------------------------------ */
+  var DEPTS = [
+    {
+      id:"biz", name:"경영학과", cat:"사회", tag:"숫자로 회사를 읽는 법",
+      initial:"경",
+      imagine:"경영학과는 멋진 정장 입고 프레젠테이션 잘하는 곳.",
+      problem:"어느 기업의 수요함수 Q = 120 − 2P, 총비용 TC = 10Q + 400이다. (1) 이윤극대화 가격·수량을 구하라. (2) 가격차별의 조건과 사회후생 변화를 영어로 3문장 이내로 서술하라.",
+      meta:"경영통계 · 서술형 25점 / 계산 10점",
+      fact:"계산은 엑셀이 해줍니다. 시험은 그 숫자를 영어로 설명하라고 물어봐요.",
+      needs:"수학을 피해 온 문과생이 가장 많이 부딪히는 곳. 통계·미적분을 1학년에 다시 만납니다.",
+      questions:[
+        "1학년 경영통계, 영어 지문 문제가 실제로 어느 정도 수준인가요?",
+        "미적분을 안 하고 들어가면 따라가기 많이 힘든가요?",
+        "팀플 비중이 진짜 큰가요? 한 학기에 발표 몇 번 하나요?"
+      ]
+    },
+    {
+      id:"film", name:"영상학과", cat:"예체능", tag:"컷으로 말하는 법을 배우는 곳",
+      initial:"영",
+      imagine:"영상학과는 카메라 들고 다니며 감성적인 단편 찍는 곳.",
+      problem:"키워드 ‘거울 / 정전 / 읽지 않은 문자’로 30초 단편의 콘티를 8컷으로 설계하라. 각 컷에 샷 사이즈(WS·MS·CU), 카메라 무브, 사운드 방향을 표기하고, 마지막 컷을 고른 이유를 5줄로 쓰라.",
+      meta:"실기 과제 · A3 2장 / 발표 3분",
+      fact:"아이디어보다 ‘왜 이 컷인가’를 설명하는 게 점수의 절반이에요.",
+      needs:"장비보다 기획·편집·발표가 중심. 손으로 만드는 과제가 계속 이어집니다.",
+      questions:[
+        "콘티는 보통 어떤 툴로 그리나요? 손그림도 인정되나요?",
+        "단편 한 편 만드는 데 실제로 얼마나 걸리나요?",
+        "촬영 장비는 학교에서 대여해 주나요, 개인 장비가 필요한가요?"
+      ]
+    },
+    {
+      id:"cs", name:"컴퓨터공학과", cat:"공학", tag:"포인터와 시간복잡도",
+      initial:"컴",
+      imagine:"컴공은 코딩 잘하면 다 되는 곳, 밤새 게임 만드는 곳.",
+      problem:"다음 코드의 출력을 쓰고 배열 a의 메모리 상태를 포인터 단위로 그려라. 이어 단일 연결 리스트에서 중간 노드를 삭제하는 함수를 작성하고 시간복잡도를 빅오로 표기하라.",
+      meta:"자료구조 · 필기 60분 / 4문제",
+      fact:"포인터는 눈으로 읽으면 이해돼요. 손으로 그려야 시험장에서 안 틀립니다.",
+      needs:"수학(이산수학·선형대수)과 증명이 생각보다 많습니다. 코드보다 원리.",
+      questions:[
+        "코딩을 거의 안 해보고 들어가도 1학년은 버틸 수 있나요?",
+        "시험에서 손코딩이랑 증명 문제 비중이 어느 정도인가요?",
+        "과제는 매주 나오나요? 팀 프로젝트는 언제부터 있나요?"
+      ]
+    },
+    {
+      id:"nurse", name:"간호학과", cat:"보건", tag:"순서를 결정하는 시험",
+      initial:"간",
+      imagine:"간호학과는 주사 놓고 환자 챙기는 따뜻한 곳.",
+      problem:"68세 남성이 흉통·호흡곤란으로 응급실에 왔다. BT 38.1℃, HR 112, RR 28, BP 88/54, SpO₂ 89%. (1) 우선순위 간호진단 2개를 NANDA-I 형식으로, (2) 각 진단의 관련요인, (3) 30분 내 중재 3가지를 근거와 함께 서술하라.",
+      meta:"상황형 · 40점 / 국가시험 스타일",
+      fact:"용어 암기가 아니라 ‘먼저 무엇을 할지’를 순서로 쓰는 시험이에요.",
+      needs:"해부생리학·약리학 용어가 첫 학기를 차지합니다. 암기량이 상당합니다.",
+      questions:[
+        "해부생리학 용어, 외우는 양이 어느 정도인가요?",
+        "실습은 언제부터 나가고, 첫 실습에서 가장 힘든 건 뭔가요?",
+        "국가시험 준비는 학교에서 얼마나 챙겨주나요?"
+      ]
+    },
+    {
+      id:"arch", name:"건축학과", cat:"공학", tag:"밤샘은 모형 칼질",
+      initial:"건",
+      imagine:"건축학과는 멋진 건물 스케치하고 모형 만드는 곳.",
+      problem:"6m × 9m 대지에 1인 가구를 위한 ‘주거 + 작업’ 공간을 설계하라. 평면도·단면도·주요 입면을 1/50로 작성하고 1/100 모형을 제출하라. 설계 개념을 3문장으로 설명하는 A3 패널 1장을 포함하라.",
+      meta:"설계 스튜디오 · 4주 / 크리틱 3회",
+      fact:"밤샘은 시험공부가 아니라 모형 칼질이에요. 손이 아픕니다.",
+      needs:"5년제(또는 인증 프로그램)와 구조·시공 과목이 함께 옵니다. 손기술과 발표력.",
+      questions:[
+        "설계 스튜디오는 일주일에 몇 시간 정도 붙어 있어야 하나요?",
+        "크리틱에서 지적이 쏟아질 때 어떻게 버티나요?",
+        "재료비·모형비로 한 학기에 얼마나 드나요?"
+      ]
+    },
+    {
+      id:"psy", name:"심리학과", cat:"사회", tag:"표를 읽는 문과",
+      initial:"심",
+      imagine:"심리학과는 사람 마음 읽고 상담하는 곳.",
+      problem:"아래 SPSS 출력을 보고 (1) 연구가설, (2) 자유도, (3) p값의 의미, (4) APA 7판 형식의 결과 서술을 작성하라. t(28) = 2.41, p = .022, d = 0.88.",
+      meta:"심리통계 · 서술형 20점",
+      fact:"통계 조교실에 가서 ‘이 표가 뭔데요’를 세 번은 물어봅니다.",
+      needs:"통계와 연구방법론이 전공의 절반. 상담은 학부 이후의 이야기입니다.",
+      questions:[
+        "통계를 못해도 심리학과에서 살아남을 수 있나요?",
+        "학부에서 상담 실습은 실제로 할 수 있나요?",
+        "실험 참여(피험자)도 학점에 들어가나요?"
+      ]
+    },
+    {
+      id:"mech", name:"기계공학과", cat:"공학", tag:"유도 과정이 점수",
+      initial:"기",
+      imagine:"기계공학과는 자동차·로봇 만드는 곳.",
+      problem:"지름 20mm 원형 단면 봉에 인장하중 5kN이 작용한다. (1) 공칭응력, (2) 세로변형률, (3) 항복강도 250MPa일 때 안전율을 계산하라. (4) 카르노 사이클 열효율 공식을 유도하라.",
+      meta:"재료역학·열역학 · 필기 90분 / 5문제",
+      fact:"답만 쓰면 0점이에요. 유도 과정이 점수의 대부분입니다.",
+      needs:"물리·미적분이 기본. 4대 역학(재료·열·유체·동역학)이 이어집니다.",
+      questions:[
+        "1학년 때 물리랑 미적분을 어느 정도로 쓰나요?",
+        "4대 역학 중에 가장 어려운 건 뭔가요?",
+        "설계 과목에서는 실제로 무엇을 만드나요?"
+      ]
+    },
+    {
+      id:"media", name:"미디어커뮤니케이션학과", cat:"사회", tag:"정답 없는 5매 레포트",
+      initial:"미",
+      imagine:"미커는 방송국 취업을 준비하는 곳, 재밌는 영상 보는 곳.",
+      problem:"‘플랫폼 노동’ 사례 하나를 골라 머독의 미디어 정치경제학 관점에서 분석하라. 최소 참고문헌 5개를 각주와 APA 참고문헌 목록으로 제시하라. 5매 이내.",
+      meta:"전공 레포트 · 5매 / 2주",
+      fact:"정답이 없어서 오히려 더 무서운 과목이에요. 읽을 논문이 계속 늘어납니다.",
+      needs:"읽기와 쓰기가 전공의 중심. 이론 이름과 학자가 계속 등장합니다.",
+      questions:[
+        "레포트 한 편 쓰는 데 책·논문을 몇 편 읽어야 하나요?",
+        "이론 수업과 실습(제작) 수업 비중은 어떻게 되나요?",
+        "방송사 취업은 실제로 어떤 준비를 하나요?"
+      ]
+    }
+  ];
+
+  var CAT_LABEL = { "사회":"인문·사회", "공학":"공학", "보건":"보건·의료", "예체능":"예체능" };
+  var byId = {};
+  DEPTS.forEach(function(d){ byId[d.id] = d; });
+
+  /* ---------------- helpers ---------------- */
+  function el(tag, cls, html){
+    var n = document.createElement(tag);
+    if(cls) n.className = cls;
+    if(html != null) n.innerHTML = html;
+    return n;
+  }
+  function esc(s){
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+
+  /* ---------------- tabs ---------------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function selectTab(key, focus){
+    tabs.forEach(function(t){
+      var on = t.dataset.tab === key;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if(on && focus) t.focus();
+    });
+    document.getElementById('panel-cup').hidden = key !== 'cup';
+    document.getElementById('panel-exam').hidden = key !== 'exam';
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ selectTab(t.dataset.tab); });
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+        e.preventDefault();
+        var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+        selectTab(next.dataset.tab, true);
+      }
+    });
+  });
+
+  /* ==================================================================
+     WORLD CUP
+  ================================================================== */
+  var ROUND_NAMES = ['8강','4강','결승','결과'];
+  var state = { round:0, match:0, pool:[], winners:[], history:[] };
+
+  var matchArea = document.getElementById('matchArea');
+  var roundLabel = document.getElementById('roundLabel');
+  var matchCount = document.getElementById('matchCount');
+  var progressDots = document.getElementById('progressDots');
+  var cupHint = document.getElementById('cupHint');
+  var cupStage = document.getElementById('cupStage');
+
+  function shuffle(a){
+    var arr = a.slice();
+    for(var i = arr.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function startCup(shuffleFirst){
+    var order = DEPTS.map(function(d){ return d.id; });
+    if(shuffleFirst) order = shuffle(order);
+    state = { round:0, match:0, pool:order, winners:[], history:[] };
+    renderMatch();
+  }
+
+  function totalMatches(){
+    return state.pool.length / 2;
+  }
+
+  function renderMatch(){
+    var pool = state.pool;
+    var a = byId[pool[state.match * 2]];
+    var b = byId[pool[state.match * 2 + 1]];
+
+    roundLabel.textContent = ROUND_NAMES[state.round];
+    matchCount.textContent = (state.match + 1) + ' / ' + totalMatches() + ' 경기';
+
+    // progress dots
+    progressDots.innerHTML = '';
+    var n = totalMatches();
+    for(var i = 0; i < n; i++){
+      var dot = document.createElement('i');
+      if(i < state.match) dot.className = 'done';
+      else if(i === state.match) dot.className = 'on';
+      progressDots.appendChild(dot);
+    }
+
+    matchArea.innerHTML = '';
+    matchArea.appendChild(makeContender(a));
+    var vs = el('div','vs');
+    vs.innerHTML = '<span>VS</span>';
+    matchArea.appendChild(vs);
+    matchArea.appendChild(makeContender(b));
+
+    cupHint.innerHTML = state.round === 2
+      ? '마지막 한 판입니다. <b>실제 시험문제</b>를 읽고 결승 진출 학과를 골라주세요.'
+      : '두 학과의 <b>실제 시험문제</b>를 읽고, 더 끌리는 쪽을 눌러주세요.';
+    cupStage.setAttribute('aria-live','polite');
+  }
+
+  function makeContender(d){
+    var btn = el('button','contender');
+    btn.type = 'button';
+    btn.setAttribute('data-id', d.id);
+    btn.setAttribute('aria-label', d.name + ' 선택 — ' + d.tag);
+    btn.innerHTML =
+      '<span class="picked-flag">선택됨</span>' +
+      '<div class="c-top">' +
+        '<div><div class="c-name">' + esc(d.name) + '</div>' +
+        '<div class="c-tag">' + esc(d.tag) + '</div></div>' +
+        '<span class="c-cat">' + esc(CAT_LABEL[d.cat]) + '</span>' +
+      '</div>' +
+      '<div class="c-imagine">고딩 때 상상 — ' + esc(d.imagine) + '</div>' +
+      '<div class="c-label">실제 시험문제</div>' +
+      '<div class="c-problem">' + esc(d.problem) +
+        '<span class="pm">' + esc(d.meta) + '</span>' +
+      '</div>' +
+      '<div class="c-foot">' +
+        '<div class="c-quote"><span class="av">' + esc(d.initial) + '</span><span>' + esc(d.fact) + '</span></div>' +
+        '<span class="c-pick">이 학과가 더 끌린다</span>' +
+      '</div>';
+    btn.addEventListener('click', function(){ pick(d.id, btn); });
+    return btn;
+  }
+
+  var locking = false;
+  function pick(id, node){
+    if(locking) return;
+    locking = true;
+    node.classList.add('picked');
+
+    setTimeout(function(){
+      state.winners.push(id);
+      state.history.push(id);
+      state.match++;
+      if(state.match >= totalMatches()){
+        // round finished
+        if(state.winners.length === 1){
+          renderResult(state.winners[0]);
+          locking = false;
+          return;
+        }
+        state.pool = state.winners.slice();
+        state.winners = [];
+        state.match = 0;
+        state.round++;
+        renderMatch();
+      } else {
+        renderMatch();
+      }
+      locking = false;
+    }, 340);
+  }
+
+  function renderResult(winnerId){
+    var d = byId[winnerId];
+    var others = state.pool.filter(function(x){ return x !== winnerId; }).map(function(x){ return byId[x].name; });
+
+    matchArea.style.display = 'none';
+    cupHint.style.display = 'none';
+    roundLabel.textContent = '결과';
+    matchCount.textContent = '월드컵 완료';
+    progressDots.innerHTML = '<i class="done"></i><i class="done"></i><i class="done"></i>';
+
+    var wrap = el('div','result');
+    wrap.innerHTML =
+      '<div class="result-head">' +
+        '<div class="result-badge"><small>MY MAJOR</small><b>' + esc(d.initial) + '</b></div>' +
+        '<div class="result-title">' +
+          '<span class="rk">당신의 전공 이상형</span>' +
+          '<h3>' + esc(d.name) + '</h3>' +
+          '<p>' + esc(d.tag) + ' — ' + esc(d.needs) + '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div class="result-grid">' +
+        '<div class="result-box">' +
+          '<h4>이 학과, 실제로는</h4>' +
+          '<p class="big">' + esc(d.problem) + '</p>' +
+          '<p class="big" style="color:#5D6B80;font-size:12.5px;margin-top:12px">' + esc(d.meta) + '</p>' +
+        '</div>' +
+        '<div class="result-box">' +
+          '<h4>재학생에게 바로 물어볼 질문</h4>' +
+          '<div class="qlist">' + d.questions.map(function(q, i){
+            return '<div class="qitem"><span class="qn">' + (i+1) + '</span><p>' + esc(q) + '</p>' +
+                   '<button class="qcopy" type="button" data-q="' + esc(q) + '">복사</button></div>';
+          }).join('') + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="result-actions">' +
+        '<button class="btn btn-primary" type="button" id="againBtn">다시 하기</button>' +
+        '<button class="btn btn-ghost" type="button" id="seeExamBtn">다른 학과 문제도 보기</button>' +
+        '<button class="btn btn-ghost" type="button" id="shareBtn">결과 복사</button>' +
+      '</div>' +
+      '<p style="margin-top:16px;font-size:12px;color:#8A96A8">결승에서 만난 학과: ' + esc(others.join(' · ')) + '</p>';
+
+    matchArea.parentNode.appendChild(wrap);
+
+    wrap.querySelector('#againBtn').addEventListener('click', function(){
+      wrap.remove();
+      matchArea.style.display = '';
+      cupHint.style.display = '';
+      startCup(true);
+      document.getElementById('cup').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    wrap.querySelector('#seeExamBtn').addEventListener('click', function(){
+      selectTab('exam');
+      document.getElementById('panel-exam').scrollIntoView({behavior:'smooth', block:'start'});
+      openCard(d.id);
+    });
+    wrap.querySelector('#shareBtn').addEventListener('click', function(){
+      var txt = '전공 이상형 월드컵 결과: ' + d.name + ' — ' + d.tag + '\n' + location.href;
+      copyText(txt, this);
+    });
+    wrap.querySelectorAll('.qcopy').forEach(function(b){
+      b.addEventListener('click', function(){ copyText(b.dataset.q, b); });
+    });
+  }
+
+  function copyText(text, btn){
+    var done = function(){
+      if(!btn) return;
+      var prev = btn.textContent;
+      btn.textContent = '복사됨';
+      btn.classList.add('ok');
+      setTimeout(function(){ btn.textContent = prev; btn.classList.remove('ok'); }, 1500);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done, function(){ legacyCopy(text); done(); });
+    } else {
+      legacyCopy(text); done();
+    }
+  }
+  function legacyCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly','');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(e){}
+    document.body.removeChild(ta);
+  }
+
+  document.getElementById('resetCup').addEventListener('click', function(){
+    var res = matchArea.parentNode.querySelector('.result');
+    if(res) res.remove();
+    matchArea.style.display = '';
+    cupHint.style.display = '';
+    startCup(true);
+  });
+
+  /* ==================================================================
+     EXAM CARDS
+  ================================================================== */
+  var cardsWrap = document.getElementById('cards');
+
+  function buildCards(){
+    cardsWrap.innerHTML = '';
+    DEPTS.forEach(function(d, i){
+      var art = el('article','card');
+      art.setAttribute('data-id', d.id);
+      art.setAttribute('data-cat', d.cat);
+      art.innerHTML =
+        '<button class="card-head" type="button" aria-expanded="false">' +
+          '<span class="card-ix">' + (i + 1 < 10 ? '0' + (i+1) : (i+1)) + '</span>' +
+          '<span class="card-h">' +
+            '<span class="nm">' + esc(d.name) + '<span class="ct">' + esc(CAT_LABEL[d.cat]) + '</span></span>' +
+            '<span class="tg">' + esc(d.tag) + '</span>' +
+          '</span>' +
+          '<span class="card-toggle">문제 보기</span>' +
+        '</button>' +
+        '<div class="card-imagine"><b>고딩 때 상상</b>' + esc(d.imagine) + '</div>' +
+        '<div class="card-body">' +
+          '<div class="card-problem">' + esc(d.problem) + '<span class="pm">' + esc(d.meta) + '</span></div>' +
+          '<div class="card-fact"><span class="av">' + esc(d.initial) + '</span><p>' + esc(d.fact) + '</p></div>' +
+        '</div>';
+      var head = art.querySelector('.card-head');
+      head.addEventListener('click', function(){ toggleCard(art); });
+      cardsWrap.appendChild(art);
+    });
+  }
+
+  function toggleCard(art){
+    var open = art.classList.contains('open');
+    // accordion: close others in the same view for calm reading
+    Array.prototype.forEach.call(cardsWrap.children, function(c){
+      if(c !== art && c.classList.contains('open')){
+        c.classList.remove('open');
+        c.querySelector('.card-head').setAttribute('aria-expanded','false');
+        c.querySelector('.card-toggle').textContent = '문제 보기';
+      }
+    });
+    art.classList.toggle('open', !open);
+    art.querySelector('.card-head').setAttribute('aria-expanded', open ? 'false' : 'true');
+    art.querySelector('.card-toggle').textContent = open ? '문제 보기' : '접기';
+  }
+
+  function openCard(id){
+    var art = cardsWrap.querySelector('[data-id="' + id + '"]');
+    if(!art) return;
+    if(!art.classList.contains('open')) toggleCard(art);
+    setTimeout(function(){
+      art.scrollIntoView({behavior:'smooth', block:'center'});
+    }, 60);
+  }
+
+  // filters
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#filters .chip'));
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(c){ c.setAttribute('aria-pressed', c === ch ? 'true' : 'false'); });
+      var cat = ch.dataset.cat;
+      Array.prototype.forEach.call(cardsWrap.children, function(card){
+        var show = cat === 'all' || card.dataset.cat === cat;
+        card.classList.toggle('hidden', !show);
+        if(!show && card.classList.contains('open')){
+          card.classList.remove('open');
+          card.querySelector('.card-head').setAttribute('aria-expanded','false');
+          card.querySelector('.card-toggle').textContent = '문제 보기';
+        }
+      });
+    });
+  });
+
+  /* ==================================================================
+     INIT
+  ================================================================== */
+  buildCards();
+  startCup(false);
+
+  // subtle reveal on scroll
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:0.08 });
+    document.querySelectorAll('.reveal').forEach(function(n){ io.observe(n); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(n){ n.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
